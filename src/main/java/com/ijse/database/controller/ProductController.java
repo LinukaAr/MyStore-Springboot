@@ -23,11 +23,11 @@ import com.ijse.database.service.ProductService;
 @RestController
 @CrossOrigin(origins = "*") //allowing cross origin to all
 public class ProductController {
-    
+
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/products") 
+    @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
         return ResponseEntity.status(200).body(productService.getAllProducts());
     }
@@ -45,7 +45,7 @@ public class ProductController {
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {
         Product product = productService.getProductById(id);
 
-        if(product != null) {
+        if (product != null) {
             return ResponseEntity.status(HttpStatus.OK).body(product); //Return 200 with Body
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); //Return 404
@@ -57,8 +57,22 @@ public class ProductController {
         return productService.updateProduct(id, product);
     }
 
-    @GetMapping("/categories/{id}/products") 
+    @GetMapping("/categories/{id}/products")
     public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable Long id) {
         return ResponseEntity.ok().body(productService.getProductsByCategory(id));
     }
 
+    @DeleteMapping("/products/{id}")
+    public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+        try {
+            boolean deleted = productService.deleteProduct(id);
+            if (deleted) {
+                return ResponseEntity.status(HttpStatus.OK).body("Product deleted successfully");
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete the product");
+        }
+    }
+}

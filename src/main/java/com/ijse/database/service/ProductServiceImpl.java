@@ -75,4 +75,14 @@ public class ProductServiceImpl implements ProductService {
             return null;
         }
     }
+    @Override
+    public boolean deleteProduct(Long id) {
+        try {
+            productRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

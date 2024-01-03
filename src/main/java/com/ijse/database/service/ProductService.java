@@ -13,5 +13,6 @@ public interface ProductService {
     Product createProduct(ProductDTO productDTO);
     Product getProductById(Long id);
     Product updateProduct(Long id, Product product);
+    boolean  deleteProduct(Long id);
     List<Product> getProductsByCategory(Long id);
 }
