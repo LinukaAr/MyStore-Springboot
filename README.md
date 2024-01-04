@@ -3,9 +3,8 @@
 A backend application built with Spring Boot for managing and providing APIs for an online store.
 
 ## Description
-
 This Spring Boot project serves as the backend for an online store. It provides various APIs for managing products, categories, stocks, orders, and other functionalities required for an e-commerce application.
-
+FrontEnd(React) -https://github.com/LinukaAr/MyStore-React
 ## Technologies Used
 
 - Java
@@ -17,10 +16,13 @@ This Spring Boot project serves as the backend for an online store. It provides 
 - Maven/Gradle (Dependency Management)
 - JUnit/Mockito (Unit Testing)
 - Swagger/OpenAPI (API Documentation)
-  
+
+
+## DataBase- MySQL(phpMyAdmin)
+![Untitled](https://github.com/LinukaAr/MyStore-Springboot/assets/89442011/8b2aad70-06c0-4238-a57c-866dc8e3d7a2)
+
 
 ## Installation and Setup
-
 1. Clone the repository.
 2. Ensure you have Java Development Kit (JDK) installed.
 3. Set up a database (MySQL, PostgreSQL, etc.) and configure database settings in `application.properties`.
