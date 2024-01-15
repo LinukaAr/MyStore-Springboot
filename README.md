@@ -5,17 +5,16 @@ A backend application built with Spring Boot for managing and providing APIs for
 ## Description
 This Spring Boot project serves as the backend for an online store. It provides various APIs for managing products, categories, stocks, orders, and other functionalities required for an e-commerce application.
 FrontEnd(React) -https://github.com/LinukaAr/MyStore-React
-## Technologies Used
 
+## Technologies Used
 - Java
 - Spring Boot
 - Spring Data JPA
 - Spring Security
 - RESTful APIs
-- MySQL/PostgreSQL/other databases
-- Maven/Gradle (Dependency Management)
-- JUnit/Mockito (Unit Testing)
-- Swagger/OpenAPI (API Documentation)
+- MySQL
+- Maven
+- Swagger(API Documentation)
 
 
 ## DataBase- MySQL(phpMyAdmin)
@@ -31,9 +30,10 @@ FrontEnd(React) -https://github.com/LinukaAr/MyStore-React
    ```bash
    mvn spring-boot:run
 ## Unit Test
-////////
+[Unit test](https://docs.google.com/document/d/1nqtSI1yRmoQAK3W7mlCTox_j3hD1J7IZfa8-wL_A73Y/edit?usp=sharing)
 
 ## API Documentation (Swagger)
 The Swagger API documentation provides detailed information about all available endpoints, request and response formats, and examples. Access the Swagger UI by navigating to:
 
-http://localhost:8080/swagger-ui.html (when the application is running locally)
+- http://localhost:8080/swagger-ui.html (when the application is running locally)
+- [API Documentation](https://docs.google.com/document/d/1FwAdJ3PiHn4QyiZb4bbKB7tR2MwGSh34kwP-yd2K0pk/edit?usp=sharing)
